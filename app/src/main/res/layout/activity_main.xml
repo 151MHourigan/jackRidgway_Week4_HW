@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.csis.lab03.MainActivity">
+
+    <!-- TextView displays a line of text-->
+    <!-- wrap_content makes size of widget to size of data inside it i.e. text !-->
+
+    <!-- Every resource must be given an id !-->
+
+    <!-- layout controls are always layout_XXXXX="" Play around with this !-->
+
+    <!-- Edit Text is a text field that will bring the keyboard up when tapped !-->
+
+
+    <Switch
+        android:text="Sine On / Off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="18dp"
+        android:id="@+id/onOff" />
+
+    <TextView
+        android:text="Frequency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/onOff"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="43dp"
+        android:id="@+id/freq" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/onOff"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="41dp"
+        android:id="@+id/volume"
+        android:layout_alignParentEnd="true" />
+
+    <Switch
+        android:text="Song On / Off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/volume"
+        android:layout_alignStart="@+id/onOff"
+        android:layout_marginTop="65dp"
+        android:id="@+id/song" />
+
+    <TextView
+        android:text="Song Volume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/song"
+        android:layout_alignStart="@+id/freq"
+        android:id="@+id/songvoltext" />
+
+    <Button
+        android:text="Record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/songvol"
+        android:layout_alignEnd="@+id/song"
+        android:layout_marginTop="73dp"
+        android:id="@+id/record" />
+
+    <Button
+        android:text="Stop Recording"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/record"
+        android:layout_alignEnd="@+id/freq"
+        android:id="@+id/stop" />
+
+    <Switch
+        android:text="Playback On / Off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stop"
+        android:layout_toEndOf="@+id/record"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="40dp"
+        android:id="@+id/playback" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/songvol"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
